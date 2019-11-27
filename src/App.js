@@ -3,6 +3,7 @@ import Nav from './Nav'
 import Footer from './Footer'
 import './App.css';
 import { Routes } from './routes';
+import ControlledCarousel from './Carousel'
 
 function App() {
   return (
@@ -11,12 +12,18 @@ function App() {
         <Nav />
       </header>
 
+      <>
+        <ControlledCarousel />
+      </>
+      
       <main>
         <Routes />
       </main>
+      
       <>
-        <Footer/>
+        <Footer />
       </>
+    
     </>
   );
 }
