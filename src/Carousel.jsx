@@ -1,92 +1,64 @@
 import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
-
-class ControlledCarousel extends React.Component {
-  // const [index, setIndex] = useState(0);
-  // const [direction, setDirection] = useState(null);
-
-  // const handleSelect = (selectedIndex, e) => {
-  //   setIndex(selectedIndex);
-  //   setDirection(e.direction);
-  // };
+import { Gallery, GalleryImage } from 'react-gesture-gallery';
 
 
-  //Goes inside Carousel as a prop
-  // activeIndex={index} direction={direction} onSelect={handleSelect}
-
-  
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      index: 0,
-      direction: null
-    };
-  }
-
-  handleSelect = (selectedIndex, e) => {
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction,
-    });
-  }
-  
-  
-  render() {
-    const { index, direction } = this.state;
+const imageOne = require('./images/1.jpg');
+const imageTwo = require('./images/2.jpg');
+const imageThree = require('./images/3.jpg')
 
 
-    return (
-      <Carousel 
-      activeIndex={index} 
-      direction={direction} 
-      onSelect={this.handleSelect} 
+
+
+function Carousel() {
+
+  const [index, setIndex] = React.useState(0);
+
+
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     if (index === 4) {
+  //       setIndex(0);
+  //     } else {
+  //       setIndex(prev => prev + 1);
+  //     }
+  //   }, 3000);
+  //   return () => clearInterval(timer);
+  // }, [index]);
+
+
+  const images = [
+    imageOne,
+    imageTwo,
+    imageThree
+  ];
+
+  return (
+    <>
+      <Gallery
+        style={{
+          background: "black",
+          height: "100vh",
+          width: "100vw"
+        }}
+        index={index}
+        onRequestChange={i => {
+          setIndex(i);
+        }}
       >
-        <Carousel.Item>
-          <img
-            // className="d-block w-100"
-            src="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization/images/Modern-Image30.jpg"
-            height='200px'
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            // className="d-block w-100"
-            src="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization/images/Modern-Image30.jpg"
-            height='200px'
-            alt="Second slide"
-          />
+        {images.map(image => (
+          <GalleryImage objectFit="contain" key={image} src={image} alt='image' />
+        ))}
+      </Gallery>
+    </>
+  )
 
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            // className="d-block w-100"
-            src="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization/images/Modern-Image30.jpg"
-            height='200px'
-            alt="Third slide"
-          />
 
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel >
-    );
-  }
 }
 
 
 
 
-export default ControlledCarousel
+
+
+export default Carousel
