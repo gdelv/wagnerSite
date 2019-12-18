@@ -61,3 +61,14 @@ nav a:hover {
     transform: translate(-50%, -50%);
     color: white;
 } */
+
+
+/* Footer CSS */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 2em;
+}

@@ -36,24 +36,25 @@ class App extends React.Component {
     return (
       <>
           <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <div style={{ height: '100%' }}>
+        {/* <div style={{ height: '100%' }}>
           {/* <SideDrawer show={this.state.sideDrawerOpen} /> */}
           {/* {backdrop} */}
-          <>
+          
             <ControlledCarousel />
-          </>
+            <Routes/>
+          
 
-          <main style={{ marginTop: '64px' }}>
+          {/* <main style={{ marginTop: '64px' }}>
             <p>this is the page content</p>
-          </main>
+          </main> */}
           {/* <main>
         <Routes />
       </main> */}
 
-          <>
-            {/* <Footer /> */}
-          </>
-        </div>
+          
+            <Footer />
+          
+        {/* </div> */}
       </>
     );
   }
