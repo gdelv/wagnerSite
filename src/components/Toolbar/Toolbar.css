@@ -1,0 +1,45 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    height: 5em;
+    z-index: 1000;
+}
+
+.toolbar_navigation {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+}
+.spacer {
+    flex: 1;
+}
+
+.toolbar_logo {
+    margin-left: 4rem;
+}
+
+.toolbar_logo a {
+    color:white;
+    text-decoration: none;
+    font-size: 1.5rem;
+} 
+
+.toolbar_logo a:hover {
+    color:orange;
+}
+
+.toolbar_navigation-items a {
+    color:white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+.toolbar_navigation-items a:hover,
+.toolbar_navigation-items a:active {
+    color:orange
+}

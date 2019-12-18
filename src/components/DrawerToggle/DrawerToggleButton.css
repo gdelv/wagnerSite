@@ -1,7 +1,7 @@
 .toggle-button {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 30px;
     width: 35px;
     background-color: transparent;
@@ -11,7 +11,7 @@
     padding: 0;
     box-sizing: border-box;
     position: relative;
-    right: -4em;
+    left: 50%;
 }
 
 .toggle-button:focus {
@@ -20,6 +20,6 @@
 
 .toggle-button-line {
     width: 30px;
-    height: 4px;
+    height: 2px;
     background: white;
 }

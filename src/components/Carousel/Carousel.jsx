@@ -47,7 +47,7 @@ function Carousel() {
         }}
       >
         {images.map(image => (
-          <GalleryImage objectFit="contain" key={image} src={image} alt='image' />
+          <GalleryImage objectFit="fill" key={image} src={image} alt='image' />
         ))}
       </Gallery>
     </>

@@ -1,9 +1,9 @@
-* {
+/* * {
     text-align: center;
-}
+} */
 
 /* NAV STYLING */
-nav {
+/* nav {
     display: flex;
     padding: 20px;
     justify-content: space-evenly;
@@ -27,7 +27,7 @@ nav a {
 nav a:hover {
     background-color: white;
     color:brown;
-}
+} */
 
 /* body {
     background: url('./images/wood.jpg');
@@ -38,7 +38,7 @@ nav a:hover {
 
 
 /* this is the hero image for the home page */
-body {
+/* body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -60,4 +60,4 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-}
+} */
