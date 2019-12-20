@@ -4,15 +4,35 @@ import DrawerToggleButton from '../DrawerToggle/DrawerToggleButton';
 import './Toolbar.css';
 
 
-const Toolbar = (props) => {
+export default class Toolbar extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            backgroundColor: 'transparent',
+            textColor: 'white'
+        }
+    }
+
+    listenScrollEvent = e => {
+        if(window.scrollY > 100) {
+            this.setState({ backgroundColor: 'white', textColor: 'black' })
+        } else {
+            this.setState({ backgroundColor: 'transparent', textColor: 'white' })
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.listenScrollEvent)
+    }
+    render() {
     return (
-        <header className='toolbar'>
-            <nav className='toolbar_navigation'>
+        <header className='toolbar' style={{background: this.state.backgroundColor, color: this.state.textColor}}>
+            <nav className='toolbar_navigation' style={{color: this.state.textColor}}>
                 <div>
-                    <DrawerToggleButton click={props.drawerClickHandler} />
+                    <DrawerToggleButton click={this.props.drawerClickHandler} />
                 </div>
 
-                <div className='toolbar_logo'>
+                <div className='toolbar_logo' style={{color: this.state.textColor}}>
                     <NavLink exact to='/' > wagnerSOLIDS </NavLink>
                 </div>
                 <div className='spacer'></div>
@@ -26,7 +46,6 @@ const Toolbar = (props) => {
             </nav>
 
         </header>
-    )
+    )}
 }
 
-export default Toolbar
