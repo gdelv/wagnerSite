@@ -1,4 +1,15 @@
-.toolbar {
+.scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    height: 5em;
+    z-index: 1000;
+    margin-bottom: 2em;
+}
+
+.no-scroll {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,6 +17,20 @@
     background: transparent;
     height: 5em;
     z-index: 1000;
+    color: white;
+    margin-bottom: 2em;
+
+}
+
+h1 {
+    padding-top: 3em;
+}
+.no-scroll a {
+    color:white
+}
+
+.scroll a {
+    color:black
 }
 
 .toolbar_navigation {

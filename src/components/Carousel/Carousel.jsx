@@ -5,6 +5,9 @@ import { Gallery, GalleryImage } from 'react-gesture-gallery';
 const imageOne = require('./images/1.jpg');
 const imageTwo = require('./images/2.jpg');
 const imageThree = require('./images/3.jpg')
+const imageFour = require('./images/4.jpg');
+const imageFive = require('./images/5.jpg')
+
 
 
 
@@ -30,7 +33,9 @@ function Carousel() {
   const images = [
     imageOne,
     imageTwo,
-    imageThree
+    imageThree,
+    imageFour,
+    imageFive
   ];
 
   return (

@@ -8,16 +8,15 @@ export default class Toolbar extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            backgroundColor: 'transparent',
-            textColor: 'white'
+            nameClass: 'no-scroll'
         }
     }
 
     listenScrollEvent = e => {
-        if(window.scrollY > 100) {
-            this.setState({ backgroundColor: 'white', textColor: 'black' })
+        if(window.scrollY > 20) {
+            this.setState({ nameClass: 'scroll' })
         } else {
-            this.setState({ backgroundColor: 'transparent', textColor: 'white' })
+            this.setState({ nameClass: 'no-scroll' })
         }
     }
 
@@ -26,13 +25,13 @@ export default class Toolbar extends React.Component {
     }
     render() {
     return (
-        <header className='toolbar' style={{background: this.state.backgroundColor, color: this.state.textColor}}>
-            <nav className='toolbar_navigation' style={{color: this.state.textColor}}>
+        <header className={ `${this.state.nameClass}`}>
+            <nav className='toolbar_navigation'>
                 <div>
                     <DrawerToggleButton click={this.props.drawerClickHandler} />
                 </div>
 
-                <div className='toolbar_logo' style={{color: this.state.textColor}}>
+                <div className='toolbar_logo'>
                     <NavLink exact to='/' > wagnerSOLIDS </NavLink>
                 </div>
                 <div className='spacer'></div>

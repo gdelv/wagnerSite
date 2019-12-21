@@ -40,7 +40,7 @@ class App extends React.Component {
           {/* <SideDrawer show={this.state.sideDrawerOpen} /> */}
           {/* {backdrop} */}
           
-            <ControlledCarousel />
+            {/* <ControlledCarousel /> */}
             <Routes/>
           
 
