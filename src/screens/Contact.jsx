@@ -1,17 +1,18 @@
 import React from 'react'
+import ContactForm from '../components/form/ContactForm'
 
 const Contact = (props) => {
-    return(
+    return (
 
         <>
-        <h2>
-            this is the contact page
-        </h2>
+            <h2>CONTACT</h2>
 
-        <p>contact name</p>
-        <p>contact phone</p>
-        <p>contact email</p>
-        <p>contact location</p>
+            <p>Wagner Silva</p>
+            <p>(516) 469-9614</p>
+            <p>wagnersolids1@gmail.com</p>
+            <p>Oyster Bay, NY</p>
+            <p>Leave me a message and I will respond ASAP</p>
+            <ContactForm/>
         </>
 
     )
