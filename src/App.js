@@ -3,7 +3,7 @@ import Toolbar from './components/Toolbar/Toolbar'
 import Footer from './components/Footer/Footer'
 import './App.css';
 import { Routes } from './routes';
-import ControlledCarousel from './components/Carousel/Carousel'
+// import ControlledCarousel from './components/Carousel/Carousel'
 // import SideDrawer from './components/SideDrawer/SideDrawer'
 // import Backdrop from './components/Backdrop/Backdrop'
 
